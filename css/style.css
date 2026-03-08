@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --dark-background: #161412;
+  --primary-green: #96d068;
+  --white: #fff;
+  --product-hunt: #ff6154;
+  --primary-blue: #65b7e2;
+
+  --font-family: "Poppins", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+html,
+body {
+  font-family: var(--font-family);
+  background-color: var(--dark-background);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  padding: 30px 0 70px 0;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.header-logo h1 {
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 0.05em;
+  color: #fff;
+}
+
+.header-logo span {
+  color: var(--primary-green);
+}
+
+.header-logo img {
+  margin-right: 10px;
+}
+
+.nav a {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  color: #fff;
+  margin-right: 50px;
+}
+
+.nav a.active {
+  color: var(--primary-green);
+}
+
+.nav a.active:hover {
+  transition: color 0.3s ease-in-out;
+}
+
+.nav a:last-child {
+  margin-right: 0;
+}
+
+.active {
+  color: var(--dark-background);
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-green);
+  transition: all 0.5s ease-out;
+  transform: translateX(-50%);
+}
+
+.active:hover::after {
+  width: 14px;
+}
+
+.hero {
+  padding: 0 0 150px 0;
+}
+
+.hero-inner {
+  text-align: center;
+}
+
+.hero-inner h1 {
+  font-weight: 600;
+  font-size: 96px;
+  line-height: 1.215;
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+.hero-inner span {
+  color: var(--primary-green);
+}
+
+.hero-inner .subtitle {
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: 0.05em;
+  color: #fff;
+  margin-bottom: 70px;
+}
+
+.label p {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  color: #fff;
+  padding: 13px 22px;
+  background-color: var(--product-hunt);
+  display: inline-flex;
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+
+.hero-img {
+  position: relative;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-img .phone {
+  position: absolute;
+  top: 94px;
+  right: 200px;
+}
+
+.btn-hero {
+  margin-top: 116px;
+}
+
+.btn-hero a {
+  margin-right: 70px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.btn-hero .btn-explore {
+  padding: 13px 48px;
+  background: var(--primary-green);
+}
+
+.btn-hero .btn-checkout {
+  padding: 13px 30px;
+  background: var(--primary-blue);
+}
+
+.btn-hero:last-child {
+  margin-right: 0;
+}
+
+/* FEATURE */
+
+.feature-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.feature-item:nth-child(even) {
+  direction: rtl;
+}
+
+.feature-item:nth-child(even) .feature-content {
+  direction: ltr;
+}
+
+.feature-icon img {
+  width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.feature-content h3 {
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 1.215;
+  color: #fff;
+  width: 760px;
+  margin-bottom: 20px;
+}
+
+.feature-content p {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.215;
+  color: #fff;
+  max-width: 760px;
+}
+
+.cta {
+  padding: 100px 0 50px;
+}
+
+.cta-card {
+  background: linear-gradient(
+    148deg,
+    rgba(109, 109, 109, 0.6) 0%,
+    rgba(17, 16, 29, 0.6) 100%
+  );
+  padding: 50px 60px;
+  border-radius: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  border: 1px solid #282a33;
+}
+
+.cta-content {
+  width: auto;
+}
+
+.cta-content h2 {
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 1.215;
+  color: #fff;
+  margin-bottom: 20px;
+  width: 788px;
+}
+
+.cta-content p {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.215;
+  color: #fff;
+  width: 760px;
+}
+
+/* Яркая зеленая кнопка */
+.cta-card a {
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: 0.05em;
+  color: #fff;
+  background: var(--primary-green);
+  border-radius: 10px;
+  padding: 17px 52px;
+}
+
+.btn-green:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(159, 232, 112, 0.3);
+}
+
+/* Маленький футер под картой */
+.footer {
+  text-align: center;
+  padding: 40px 0;
+  color: #4b4c52;
+  font-size: 14px;
+}
