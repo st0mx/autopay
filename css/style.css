@@ -287,3 +287,128 @@ body {
   color: #4b4c52;
   font-size: 14px;
 }
+
+/* --- АДАПТИВНАЯ ЗОНА --- */
+
+@media (max-width: 1024px) {
+  .hero-inner h1,
+  .feature-content h3,
+  .cta-content h2 {
+    font-size: 54px; /* Уменьшаем гигантские шрифты для планшетов */
+    width: 100% !important;
+    max-width: 100%;
+  }
+  .feature-content p,
+  .cta-content p {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* 1. Обнуляем жесткие ширины, которые все ломают */
+  .hero-inner h1,
+  .feature-content h3,
+  .feature-content p,
+  .cta-content h2,
+  .cta-content p {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center;
+  }
+
+  /* 2. Шапка в столбик */
+  .header-inner {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav a {
+    margin-right: 15px !important;
+    margin-left: 15px !important;
+  }
+
+  /* 3. Hero секция */
+  .hero-inner h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+  }
+
+  .btn-hero {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .btn-hero a {
+    margin-right: 0 !important;
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+
+  /* 4. Картинки в Hero (убираем абсолютное позиционирование телефона) */
+  .hero-img .phone {
+    position: static !important; /* Телефон больше не летает, а стоит в потоке */
+    margin-top: 20px;
+    width: 100%;
+    max-width: 200px;
+  }
+
+  /* 5. ФИЧИ (Твой Grid) — в одну колонку */
+  .feature-item {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+    gap: 30px;
+    margin-bottom: 80px;
+    direction: ltr !important; /* Отменяем шахматку */
+  }
+
+  .feature-item:nth-child(even) .feature-content {
+    direction: ltr !important;
+  }
+
+  .feature-icon img {
+    width: 100% !important;
+    max-width: 300px;
+  }
+
+  /* 6. CTA Блок */
+  .cta-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    gap: 30px;
+  }
+
+  .cta-card a {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-inner h1 {
+    font-size: 32px;
+  }
+
+  .feature-content h3,
+  .cta-content h2 {
+    font-size: 28px;
+  }
+
+  .label p {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}
